@@ -1,18 +1,15 @@
 package com.example.springbootinit.model.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
  * 用户
  */
+@TableName(value = "user")
 @Data
 public class User implements Serializable {
 
@@ -66,7 +63,7 @@ public class User implements Serializable {
      * 删除时间
      */
     @TableLogic
-    private Date deleteTime;
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
