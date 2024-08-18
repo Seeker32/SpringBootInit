@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydb?useSSL=false
+    username: root
+    password: password
+knife4j:
+  enable: true
+  openapi:
+    title: Knife4j文档
+    description: "测试"
+    email: 123@qq.com
+    concat: Seeker32
+    version: v1.0
+    group:
+      test1:
+        group-name: group1
+        api-rule: package
+        api-rule-resources:
+          - com.example.springbootinit.controller
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleteTime
+      logic-delete-value: now()
+      logic-not-delete-value: null
